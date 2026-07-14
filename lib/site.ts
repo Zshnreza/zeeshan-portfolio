@@ -255,10 +255,10 @@ export const experiences: Experience[] = [
   {
     company: "Amazon",
     role: "Machine Learning Engineer",
-    period: "2023 — Present",
+    period: "Nov 2024 — Mar 2026",
     location: "Remote · India",
     summary:
-      "Building and scaling ML systems that serve millions of requests with strict latency and reliability targets.",
+      "Built and scaled ML systems that served millions of requests with strict latency and reliability targets.",
     highlights: [
       "Cut model inference latency 63% by migrating serving to a batched, quantized runtime.",
       "Shipped a retrieval-augmented assistant adopted by 5 internal teams.",
@@ -269,7 +269,7 @@ export const experiences: Experience[] = [
   {
     company: "Ayvole",
     role: "AI Engineer",
-    period: "2022 — 2023",
+    period: "Jun 2022 — Nov 2024",
     location: "India",
     summary:
       "Led development of LLM-powered product features from prototype to production.",
@@ -283,7 +283,7 @@ export const experiences: Experience[] = [
   {
     company: "BPCL",
     role: "Data Scientist",
-    period: "2021 — 2022",
+    period: "2021 — May 2022",
     location: "India",
     summary:
       "Applied ML to operational data to drive measurable business outcomes.",
@@ -319,14 +319,14 @@ export const timeline: TimelineItem[] = [
     detail: "Went all-in on generative AI, RAG, and agentic systems in production.",
   },
   {
-    year: "2023",
+    year: "2024",
     title: "Scaling AI at Amazon",
     detail: "Serving models at scale — latency, reliability, and eval discipline.",
   },
   {
-    year: "Now",
+    year: "2026",
     title: "Building the future of agents",
-    detail: "Designing autonomous systems that reason, act, and self-correct.",
+    detail: "Open to new roles — designing autonomous systems that reason, act, and self-correct.",
   },
 ];
 
