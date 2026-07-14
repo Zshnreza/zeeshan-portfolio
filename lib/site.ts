@@ -29,7 +29,7 @@ export const site = {
   url: "https://zeeshanraza.dev",
   resumeUrl: "/resume.pdf", // drop a resume.pdf into /public
   socials: {
-    github: "https://github.com/zeeshanraza", // ← replace with real handle
+    github: "https://github.com/Zshnreza",
     linkedin: "https://linkedin.com/in/zeeshanraza", // ← replace
     x: "https://x.com/zeeshanraza", // ← replace
     calendly: "https://calendly.com/zeeshanraza/intro", // ← replace
@@ -149,7 +149,7 @@ export const projects: Project[] = [
       { label: "p95 latency", value: "1.8s" },
     ],
     accent: "#7c5cff",
-    github: "https://github.com/zeeshanraza",
+    github: "https://github.com/Zshnreza",
     featured: true,
   },
   {
@@ -167,7 +167,7 @@ export const projects: Project[] = [
       { label: "Recall@10", value: "0.88" },
     ],
     accent: "#3fb6ff",
-    github: "https://github.com/zeeshanraza",
+    github: "https://github.com/Zshnreza",
     featured: true,
   },
   {
@@ -185,7 +185,7 @@ export const projects: Project[] = [
       { label: "Throughput", value: "120 rps" },
     ],
     accent: "#00d3a7",
-    github: "https://github.com/zeeshanraza",
+    github: "https://github.com/Zshnreza",
     featured: true,
   },
   {
@@ -203,7 +203,7 @@ export const projects: Project[] = [
       { label: "Regressions caught", value: "31" },
     ],
     accent: "#ff8a3d",
-    github: "https://github.com/zeeshanraza",
+    github: "https://github.com/Zshnreza",
   },
   {
     slug: "market-intelligence",
@@ -220,7 +220,7 @@ export const projects: Project[] = [
       { label: "Precision", value: "0.87" },
     ],
     accent: "#ff5c7c",
-    github: "https://github.com/zeeshanraza",
+    github: "https://github.com/Zshnreza",
   },
   {
     slug: "vector-search-engine",
@@ -237,7 +237,7 @@ export const projects: Project[] = [
       { label: "Recall", value: "0.96" },
     ],
     accent: "#12c2e9",
-    github: "https://github.com/zeeshanraza",
+    github: "https://github.com/Zshnreza",
   },
 ];
 
