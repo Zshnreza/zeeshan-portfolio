@@ -74,8 +74,23 @@ const jsonLd = {
   description: site.tagline,
   url: site.url,
   email: `mailto:${site.email}`,
-  address: { "@type": "PostalAddress", addressCountry: site.location },
-  sameAs: [site.socials.github, site.socials.linkedin, site.socials.x],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Bangalore",
+    addressCountry: "India",
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Swami Vivekananda Institute of Science and Technology, Kolkata",
+  },
+  knowsAbout: [
+    "Large Language Models",
+    "Agentic AI",
+    "Retrieval-Augmented Generation",
+    "AWS Bedrock",
+    "Machine Learning",
+  ],
+  sameAs: [site.socials.github, site.socials.linkedin],
 };
 
 export default function RootLayout({

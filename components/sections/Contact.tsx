@@ -29,7 +29,7 @@ export function Contact() {
                 <span className="text-aurora">remarkable.</span>
               </>
             }
-            description="I'm open to AI Engineer, ML Engineer, and Applied AI roles — worldwide remote, relocation, and visa sponsorship. Have a hard problem? I'd love to hear it."
+            description="I'm open to ML, Generative AI, and Agentic AI Engineer roles — in Bangalore and globally. Have a hard problem in LLMs, RAG, or agents? I'd love to hear it."
           />
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">

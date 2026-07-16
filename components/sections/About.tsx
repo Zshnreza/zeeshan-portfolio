@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { site, timeline } from "@/lib/site";
+import { certifications, education, site, timeline } from "@/lib/site";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -23,33 +23,55 @@ export function About() {
         {/* Narrative */}
         <Reveal className="space-y-5 text-pretty text-muted">
           <p>
-            I&apos;m {site.firstName}, an AI Engineer based in {site.location}. My
-            work lives at the intersection of large language models, agentic
-            systems, and production machine learning — the messy space where a
-            great model becomes a great product.
+            I&apos;m {site.firstName}, an ML &amp; Agentic AI Engineer based in{" "}
+            {site.location}. For the last three years my work has lived where a
+            promising model becomes a dependable system — agentic workflows, RAG
+            pipelines, and multimodal data platforms running in production.
           </p>
           <p>
-            I&apos;ve built retrieval pipelines over millions of documents,
-            multi-agent frameworks that reason and self-correct, and evaluation
-            harnesses that keep quality honest on every deploy. I care as much
-            about latency budgets and cost curves as I do about model quality.
+            At AWS Bedrock I built multi-agent systems on LangGraph, engineered
+            ETL pipelines for multimodal LLM training across text, image, audio
+            and video, and designed the quality-assurance frameworks —
+            LLM-as-judge, groundedness, hallucination and safety checks — that
+            decide whether a model is fit to ship.
           </p>
           <p>
-            Right now I&apos;m focused on autonomous agents — systems that plan,
-            act, and recover on their own — and I&apos;m open to roles worldwide,
-            including relocation and visa sponsorship.
+            I started in operational data at BPCL and large-scale market research
+            at Ayvole, which is where I learned that the hard part is rarely the
+            model: it&apos;s the pipeline, the evaluation, and the decision it
+            has to support. I&apos;m open to Bangalore and global opportunities.
           </p>
+
+          <div className="pt-2">
+            <div className="text-xs font-medium uppercase tracking-widest text-[var(--fg)]">
+              Education
+            </div>
+            {education.map((e) => (
+              <div key={e.degree} className="mt-2">
+                <div className="text-sm font-medium text-[var(--fg)]">
+                  {e.degree}
+                </div>
+                <div className="text-xs">
+                  {e.school} · {e.period} · {e.detail}
+                </div>
+              </div>
+            ))}
+          </div>
+
           <div className="flex flex-wrap gap-2 pt-2">
-            {["Certified on AWS", "Kaggle competitor", "Open-source author"].map(
-              (chip) => (
-                <span
-                  key={chip}
-                  className="glass rounded-full px-3 py-1 text-xs text-[var(--fg)]"
-                >
-                  {chip}
-                </span>
-              )
-            )}
+            {[
+              "AWS Educate — Cloud 101",
+              "2 Years on Kaggle",
+              "Data Analysis with Python",
+              `${certifications.length} certifications`,
+            ].map((chip) => (
+              <span
+                key={chip}
+                className="glass rounded-full px-3 py-1 text-xs text-[var(--fg)]"
+              >
+                {chip}
+              </span>
+            ))}
           </div>
         </Reveal>
 

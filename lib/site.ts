@@ -1,63 +1,60 @@
 /**
  * Single source of truth for all portfolio content.
  *
- * ─────────────────────────────────────────────────────────────────────
- * ⚠️  EDIT ME — the values below are realistic, production-shaped samples.
- * Swap in your real dates, metrics, links, and project details.
- * Nothing here is a verified claim; treat every number as a placeholder
- * until you replace it with your own.
- * ─────────────────────────────────────────────────────────────────────
+ * Sourced from Md Zeeshan Raza's CV (Zeeshan cv.pdf) and github.com/Zshnreza.
+ * Facts here — dates, roles, metrics, projects — reflect the real CV.
+ * Skill "level" values are a subjective self-assessment: tune them freely.
  */
 
 export const site = {
   name: "Md Zeeshan Raza",
   firstName: "Zeeshan",
-  role: "AI Engineer",
+  role: "ML & Agentic AI Engineer",
   roles: [
-    "AI Engineer",
-    "Machine Learning Engineer",
+    "ML & Agentic AI Engineer",
     "Generative AI Engineer",
     "LLM Engineer",
-    "Agentic AI Engineer",
-    "Data Scientist",
+    "Machine Learning Engineer",
+    "Data Analyst",
   ],
   tagline:
-    "Building intelligent AI systems that solve real-world problems with LLMs, Agentic AI, and Production ML.",
-  location: "India",
-  availability: "Open to worldwide remote · relocation · visa sponsorship",
+    "ML and Agentic AI Engineer with 3 years of experience across LLMs, RAG, Agentic Systems, and Multimodal workflows — built in production on AWS Bedrock.",
+  location: "Bangalore, India",
+  availability: "Open to Bangalore & global opportunities",
   email: "zshnreza@gmail.com",
-  url: "https://zeeshanraza.dev",
-  resumeUrl: "/resume.pdf", // drop a resume.pdf into /public
+  // Phone from the CV is intentionally NOT published here to avoid scraping/spam.
+  // Add it if you want it public: "+91-7449671033"
+  url: "https://zeeshan-portfolio-chi.vercel.app",
+  resumeUrl: "/resume.pdf", // drop your CV into /public as resume.pdf
   socials: {
     github: "https://github.com/Zshnreza",
-    linkedin: "https://linkedin.com/in/zeeshanraza", // ← replace
-    x: "https://x.com/zeeshanraza", // ← replace
-    calendly: "https://calendly.com/zeeshanraza/intro", // ← replace
+    linkedin: "https://www.linkedin.com/in/zeeshan-ai-engineer/",
+    calendly: "https://calendly.com/zshnreza",
   },
 } as const;
 
-/** Rotating keywords under the hero headline. */
+/** Rotating keywords under the hero headline — all from the CV skill set. */
 export const heroKeywords = [
   "LLMs",
   "RAG",
-  "LangChain",
+  "Agentic AI",
   "LangGraph",
+  "LangChain",
   "AWS Bedrock",
   "PyTorch",
   "TensorFlow",
-  "Agentic AI",
+  "Knowledge Graphs",
+  "Multimodal AI",
   "Vector Databases",
   "Prompt Engineering",
-  "Knowledge Graphs",
-  "Docker",
 ] as const;
 
-/** Headline metrics for the hero + achievements counters. */
+/** Headline metrics — every number below is taken from the CV. */
 export const stats = [
-  { label: "Models shipped to production", value: 18, suffix: "+" },
-  { label: "Inference latency reduced", value: 63, suffix: "%" },
-  { label: "Documents indexed for RAG", value: 4.2, suffix: "M+" },
-  { label: "GitHub stars across projects", value: 1200, suffix: "+" },
+  { label: "Years building AI systems", value: 3, suffix: "+" },
+  { label: "Faster data-driven decisions", value: 40, suffix: "%" },
+  { label: "Concurrent enterprise projects", value: 5, suffix: "+" },
+  { label: "Startups analysed, 8 sectors", value: 4000, suffix: "+" },
 ] as const;
 
 export type Skill = { name: string; level: number };
@@ -65,58 +62,59 @@ export type SkillGroup = { title: string; accent: string; skills: Skill[] };
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "AI & LLMs",
+    title: "Generative & Agentic AI",
     accent: "#7c5cff",
     skills: [
-      { name: "LLM Fine-tuning", level: 92 },
-      { name: "RAG Pipelines", level: 95 },
-      { name: "Agentic AI", level: 90 },
-      { name: "LangChain / LangGraph", level: 93 },
-      { name: "Prompt Engineering", level: 96 },
-      { name: "AWS Bedrock", level: 85 },
+      { name: "LLMs & LLM Fine-Tuning", level: 92 },
+      { name: "RAG + Contextual Chunking", level: 94 },
+      { name: "Agentic AI & Multi-Agent", level: 90 },
+      { name: "LangChain / LangGraph", level: 92 },
+      { name: "Prompt Engineering", level: 95 },
+      { name: "Knowledge Graphs / SPARQL", level: 82 },
     ],
   },
   {
-    title: "Machine Learning",
+    title: "AI / ML Frameworks",
     accent: "#3fb6ff",
     skills: [
-      { name: "PyTorch", level: 90 },
+      { name: "PyTorch", level: 88 },
       { name: "TensorFlow", level: 82 },
-      { name: "scikit-learn", level: 88 },
-      { name: "Transformers", level: 91 },
-      { name: "MLOps", level: 84 },
+      { name: "Hugging Face Transformers", level: 90 },
+      { name: "scikit-learn", level: 86 },
+      { name: "Keras", level: 80 },
     ],
   },
   {
-    title: "Data & Backend",
+    title: "Cloud & Engineering",
     accent: "#00d3a7",
     skills: [
-      { name: "Python", level: 96 },
-      { name: "FastAPI", level: 90 },
-      { name: "Vector DBs (pgvector / Pinecone)", level: 89 },
-      { name: "PostgreSQL", level: 86 },
-      { name: "Spark / Pandas", level: 83 },
+      { name: "AWS Bedrock", level: 90 },
+      { name: "AWS (S3, Lambda, SageMaker)", level: 84 },
+      { name: "Docker", level: 88 },
+      { name: "REST APIs (Flask)", level: 86 },
+      { name: "CI/CD & Git", level: 85 },
     ],
   },
   {
-    title: "Cloud & DevOps",
+    title: "Data, Analytics & BI",
     accent: "#ff8a3d",
     skills: [
-      { name: "AWS (SageMaker, Lambda)", level: 88 },
-      { name: "Docker", level: 90 },
-      { name: "Kubernetes", level: 78 },
-      { name: "CI/CD", level: 85 },
-      { name: "Terraform", level: 74 },
+      { name: "Python", level: 95 },
+      { name: "SQL / PostgreSQL", level: 88 },
+      { name: "ETL Pipelines", level: 90 },
+      { name: "Streamlit", level: 87 },
+      { name: "Power BI / Tableau", level: 80 },
     ],
   },
 ];
 
-/** Flat tag list for the interactive skill sphere. */
+/** Flat tag list for the interactive skill sphere — CV tech only. */
 export const skillTags = [
-  "LLMs", "RAG", "LangGraph", "PyTorch", "Bedrock", "Agents", "Python",
-  "FastAPI", "pgvector", "Pinecone", "Docker", "Kubernetes", "AWS",
-  "SageMaker", "Transformers", "Fine-tuning", "Prompting", "MLOps",
-  "TensorFlow", "Spark", "Terraform", "GraphRAG", "Embeddings", "vLLM",
+  "LLMs", "RAG", "LangGraph", "LangChain", "Agentic AI", "PyTorch",
+  "TensorFlow", "Transformers", "Bedrock", "SageMaker", "Lambda", "S3",
+  "Python", "SQL", "Flask", "Docker", "CI/CD", "SPARQL", "Knowledge Graphs",
+  "Vector DBs", "Multimodal", "Fine-Tuning", "Streamlit", "Power BI",
+  "Alteryx", "scikit-learn", "Keras", "ETL",
 ];
 
 export type Project = {
@@ -135,109 +133,107 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "agentic-ai-platform",
-    title: "Agentic AI Platform",
-    category: "Agentic AI",
+    slug: "agentic-ai-rag-pipeline",
+    title: "Agentic AI & RAG Pipeline System",
+    category: "Agentic AI · AWS Bedrock",
     summary:
-      "A multi-agent orchestration layer that plans, delegates, and self-corrects across tools.",
+      "Production-grade multi-agent system on LangGraph with contextual-chunking RAG and SPARQL knowledge graphs.",
     description:
-      "A production framework where specialized agents reason over a shared memory, call tools through a typed registry, and recover from failures with reflection loops. Built on LangGraph with deterministic checkpoints for replayability.",
-    tags: ["LangGraph", "Python", "Redis", "OpenAI", "Postgres"],
+      "Designed and deployed a production-grade multi-agent AI system using LangGraph, integrating contextual-chunking RAG pipelines and SPARQL-based knowledge graphs — fully Dockerized with CI/CD pipelines, monitoring, and observability on AWS.",
+    tags: ["LangGraph", "LangChain", "RAG", "SPARQL", "Docker", "AWS Bedrock"],
     metrics: [
-      { label: "Task success", value: "94%" },
-      { label: "Tools orchestrated", value: "40+" },
-      { label: "p95 latency", value: "1.8s" },
+      { label: "Enterprise projects", value: "5+" },
+      { label: "Knowledge graph", value: "SPARQL" },
+      { label: "Delivery", value: "Docker + CI/CD" },
     ],
     accent: "#7c5cff",
-    github: "https://github.com/Zshnreza",
     featured: true,
   },
   {
-    slug: "rag-pipeline",
-    title: "Enterprise RAG Pipeline",
-    category: "Retrieval",
+    slug: "llm-finetuning-eval-framework",
+    title: "LLM Fine-Tuning & AI Evaluation Framework",
+    category: "Evaluation · AWS Bedrock",
     summary:
-      "Hybrid retrieval over 4M+ documents with re-ranking, citations, and eval guardrails.",
+      "End-to-end fine-tuning pipelines with offline and online evaluation for groundedness, safety, and hallucination.",
     description:
-      "A retrieval stack combining BM25 + dense embeddings, cross-encoder re-ranking, and streaming answers with inline citations. Ships with an offline eval harness measuring faithfulness and answer relevance on every deploy.",
-    tags: ["pgvector", "Cohere Rerank", "FastAPI", "LangChain", "Ragas"],
+      "Developed end-to-end LLM fine-tuning pipelines leveraging PyTorch and TensorFlow, implementing robust offline and online evaluation frameworks (LLM-as-Judge, groundedness, safety, hallucination detection) supported by automated Python dashboards.",
+    tags: ["PyTorch", "TensorFlow", "LLM-as-Judge", "BLEU", "ROUGE", "BERTScore"],
     metrics: [
-      { label: "Docs indexed", value: "4.2M" },
-      { label: "Faithfulness", value: "0.93" },
-      { label: "Recall@10", value: "0.88" },
+      { label: "Frameworks", value: "PyTorch / TF" },
+      { label: "Scoring", value: "LLM-as-Judge" },
+      { label: "Signals", value: "BLEU · ROUGE" },
     ],
     accent: "#3fb6ff",
-    github: "https://github.com/Zshnreza",
     featured: true,
   },
   {
-    slug: "multimodal-ai",
-    title: "Multimodal AI Assistant",
-    category: "Multimodal",
+    slug: "multimodal-ai-data-pipeline",
+    title: "Multimodal AI Data Pipeline",
+    category: "Multimodal · AWS Bedrock",
     summary:
-      "Vision + language assistant that reasons over documents, charts, and screenshots.",
+      "Scalable ingestion across text, image, audio, and video to optimise foundation models, with live quality monitoring.",
     description:
-      "Combines a vision encoder with an LLM to answer questions grounded in images and PDFs. Handles OCR, layout parsing, and chart understanding with tool-augmented reasoning.",
-    tags: ["CLIP", "Vision Transformers", "PyTorch", "Triton"],
+      "Architected scalable multimodal data ingestion pipelines across text, image, audio, and video to optimize foundation models, complemented by real-time monitoring dashboards tracking pipeline health and model quality metrics.",
+    tags: ["ETL", "Multimodal", "Streamlit", "AWS Bedrock", "Monitoring"],
     metrics: [
-      { label: "VQA accuracy", value: "89%" },
-      { label: "Modalities", value: "3" },
-      { label: "Throughput", value: "120 rps" },
+      { label: "Modalities", value: "4" },
+      { label: "Faster decisions", value: "40%" },
+      { label: "Monitoring", value: "Real-time" },
     ],
     accent: "#00d3a7",
-    github: "https://github.com/Zshnreza",
     featured: true,
   },
   {
-    slug: "llm-eval-framework",
-    title: "LLM Evaluation Framework",
-    category: "Evaluation",
+    slug: "zeeshan-pro-agent",
+    title: "Zeeshan Pro Agent",
+    category: "Open Source · Agents",
     summary:
-      "Automated, model-graded evals with regression gates wired into CI.",
+      "A ChatGPT-style personal agent workspace for hosted LLM workflows — with human approval before external actions.",
     description:
-      "A framework for defining datasets, rubrics, and LLM-as-judge scoring that blocks regressions before release. Tracks drift across model versions with dashboards.",
-    tags: ["Python", "LLM-as-Judge", "GitHub Actions", "DuckDB"],
+      "An open-source personal agent workspace built on LangGraph and LangChain. Handles university/job discovery, CV and cover-letter drafting, and document checklists, with human approval gates before submissions and self-improvement from saved outcomes. Runs entirely on hosted inference (Groq / Hugging Face) plus managed Qdrant Cloud vector storage — no local GPU required.",
+    tags: ["LangGraph", "LangChain", "Python", "Groq", "Qdrant"],
     metrics: [
-      { label: "Test cases", value: "2,400" },
-      { label: "CI gate", value: "< 3 min" },
-      { label: "Regressions caught", value: "31" },
+      { label: "Orchestration", value: "LangGraph" },
+      { label: "Vector store", value: "Qdrant" },
+      { label: "Inference", value: "Groq / HF" },
     ],
     accent: "#ff8a3d",
-    github: "https://github.com/Zshnreza",
+    github: "https://github.com/Zshnreza/zeeshan-pro-agent",
   },
   {
-    slug: "market-intelligence",
-    title: "Market Intelligence Platform",
-    category: "Applied ML",
+    slug: "rag-telegram-bot",
+    title: "RAG Telegram Bot",
+    category: "Open Source · RAG",
     summary:
-      "Real-time signal extraction from news, filings, and market data.",
+      "A fully local RAG chatbot with source attribution — no OpenAI API required. Live on Telegram.",
     description:
-      "Streams unstructured financial text through NER, sentiment, and event-extraction models to surface tradable signals with explainability.",
-    tags: ["Kafka", "spaCy", "Transformers", "Airflow"],
+      "A Retrieval-Augmented Generation chatbot answering questions from custom documents with source attribution. Runs a local Mistral model via Ollama, Sentence Transformers for embeddings, and FAISS for vector search, served through the Telegram Bot API — fully local, zero inference cost.",
+    tags: ["Ollama", "Mistral", "FAISS", "Sentence Transformers", "Python"],
     metrics: [
-      { label: "Sources", value: "60+" },
-      { label: "Latency", value: "< 2s" },
-      { label: "Precision", value: "0.87" },
+      { label: "Local LLM", value: "Mistral" },
+      { label: "Vector search", value: "FAISS" },
+      { label: "API cost", value: "$0" },
     ],
     accent: "#ff5c7c",
-    github: "https://github.com/Zshnreza",
+    github: "https://github.com/Zshnreza/rag-telegram-bot",
+    demo: "https://t.me/zeeshan_rag_bot",
   },
   {
-    slug: "vector-search-engine",
-    title: "Vector Search Engine",
-    category: "Infrastructure",
+    slug: "nyc-taxi-data-processing",
+    title: "NYC Taxi Data Processing",
+    category: "Data Engineering",
     summary:
-      "Low-latency semantic search with hybrid filtering at scale.",
+      "Large-scale trip-data processing and analysis — the data-engineering fundamentals behind reliable ML.",
     description:
-      "A search service with HNSW indexing, metadata filtering, and quantization for cost-efficient recall over hundreds of millions of vectors.",
-    tags: ["HNSW", "Quantization", "Rust", "gRPC"],
+      "A data-engineering project processing large-scale NYC taxi trip data: ingestion, cleaning, and analysis pipelines that turn raw records into query-ready datasets.",
+    tags: ["Python", "ETL", "Data Engineering", "SQL"],
     metrics: [
-      { label: "Vectors", value: "200M" },
-      { label: "p99", value: "12ms" },
-      { label: "Recall", value: "0.96" },
+      { label: "Domain", value: "Trip data" },
+      { label: "Focus", value: "ETL" },
+      { label: "Scale", value: "Large-scale" },
     ],
     accent: "#12c2e9",
-    github: "https://github.com/Zshnreza",
+    github: "https://github.com/Zshnreza/NYC-Taxi-Data-Processing",
   },
 ];
 
@@ -253,47 +249,88 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    company: "Amazon",
-    role: "Machine Learning Engineer",
+    company: "Amazon Web Services (AWS)",
+    role: "ML Data Associate II — ML & Agentic AI Engineer",
     period: "Nov 2024 — Mar 2026",
-    location: "Remote · India",
+    location: "Bedrock · Bangalore, India",
     summary:
-      "Built and scaled ML systems that served millions of requests with strict latency and reliability targets.",
+      "Built production Generative AI systems on AWS Bedrock — agentic workflows, multimodal pipelines, and the evaluation frameworks that keep them safe.",
     highlights: [
-      "Cut model inference latency 63% by migrating serving to a batched, quantized runtime.",
-      "Shipped a retrieval-augmented assistant adopted by 5 internal teams.",
-      "Owned the eval and rollout pipeline that gates every production model release.",
+      "Engineered scalable ETL pipelines for multimodal LLM training across text, image, audio, and video on AWS Bedrock, supporting 5+ concurrent enterprise projects with improved reliability.",
+      "Built Agentic AI systems using LangGraph and LangChain — multi-step reasoning agents, tool-calling pipelines, and RAG workflows with contextual chunking and SPARQL-based knowledge graph integration.",
+      "Fine-tuned LLMs (SLMs, LRMs) with PyTorch and TensorFlow, and designed AI quality-assurance frameworks (LLM-as-judge, BLEU, ROUGE, BERTScore) to evaluate accuracy, hallucination, groundedness, and safety at production scale.",
+      "Enabled 40% faster data-driven decisions through real-time Streamlit dashboards monitoring pipeline health and model performance for cross-functional teams.",
+      "Productionized enterprise AI workflows with Docker, Flask-based REST APIs, CI/CD, observability, alerting, and runbooks for enterprise-grade reliability.",
     ],
-    tech: ["Python", "PyTorch", "AWS SageMaker", "Bedrock", "Docker"],
+    tech: [
+      "AWS Bedrock",
+      "LangGraph",
+      "LangChain",
+      "PyTorch",
+      "TensorFlow",
+      "Docker",
+      "Flask",
+      "Streamlit",
+    ],
   },
   {
     company: "Ayvole",
-    role: "AI Engineer",
-    period: "Jun 2022 — Nov 2024",
-    location: "India",
+    role: "Market Research Analyst & Data Analyst",
+    period: "Jul 2023 — Nov 2024",
+    location: "Dehradun, India",
     summary:
-      "Led development of LLM-powered product features from prototype to production.",
+      "Turned large-scale, messy market data into research and recommendations that senior stakeholders acted on.",
     highlights: [
-      "Designed a RAG pipeline over 4M+ documents with citation-grounded answers.",
-      "Reduced hallucination rate to under 4% with an eval-driven guardrail layer.",
-      "Built the agent framework powering the platform's automation workflows.",
+      "Designed end-to-end data collection and analytics pipelines aggregating structured datasets from 100+ sources.",
+      "Supported large-scale research analysing 4,000+ startups across 8 sectors for Outlook Business — Start-Up Outperformers 2023.",
+      "Conducted market research and gap analysis, translating statistical findings into written business recommendations and presentations for senior stakeholders.",
+      "Drove three new media product launches, contributing to a 30% increase in market share across client engagements.",
     ],
-    tech: ["LangChain", "FastAPI", "pgvector", "OpenAI", "Postgres"],
+    tech: ["Python", "SQL", "Alteryx", "Power BI", "Tableau", "Excel"],
   },
   {
-    company: "BPCL",
-    role: "Data Scientist",
-    period: "2021 — May 2022",
-    location: "India",
+    company: "Bharat Petroleum (BPCL)",
+    role: "Technical Apprentice — Data & Operations",
+    period: "May 2021 — May 2022",
+    location: "Kolkata, India",
     summary:
-      "Applied ML to operational data to drive measurable business outcomes.",
+      "First hands-on exposure to real operational data — and the compliance discipline that comes with it.",
     highlights: [
-      "Built demand-forecasting models improving planning accuracy by 22%.",
-      "Automated a reporting pipeline that saved 30+ analyst hours per week.",
-      "Partnered with ops leaders to translate models into decisions.",
+      "Collected, processed, and analysed operational data while ensuring 100% compliance with industry safety and documentation standards.",
+      "Delivered data-driven recommendations supporting four or more operational departments.",
     ],
-    tech: ["Python", "scikit-learn", "Spark", "SQL", "Airflow"],
+    tech: ["Python", "SQL", "Excel", "Statistical Analysis"],
   },
+];
+
+export type EducationItem = {
+  degree: string;
+  school: string;
+  period: string;
+  detail: string;
+};
+
+export const education: EducationItem[] = [
+  {
+    degree: "B.Tech — Electrical & Electronics Engineering",
+    school: "Swami Vivekananda Institute of Science and Technology, Kolkata",
+    period: "Jun 2020 — May 2023",
+    detail: "CGPA 8.4",
+  },
+];
+
+export const certifications = [
+  { name: "AWS Educate: Introduction to Cloud 101", issuer: "Amazon Web Services · Credly Verified" },
+  { name: "Summarize & Simplify Information with Microsoft 365 Copilot", issuer: "Microsoft Learn" },
+  { name: "Get Started Building with Power BI", issuer: "Microsoft Learn" },
+  { name: "Data Analysis with Python", issuer: "freeCodeCamp" },
+  { name: "Intermediate SQL", issuer: "DataCamp" },
+  { name: "Introduction to SQL", issuer: "DataCamp" },
+  { name: "Introduction to Relational Databases in SQL", issuer: "DataCamp" },
+  { name: "Google Analytics for Beginners", issuer: "Google Analytics Academy" },
+  { name: "AI For India", issuer: "HCL GUVI" },
+  { name: "Google for Education", issuer: "HCL GUVI" },
+  { name: "2 Years on Kaggle", issuer: "Kaggle" },
 ];
 
 export type TimelineItem = {
@@ -306,27 +343,32 @@ export const timeline: TimelineItem[] = [
   {
     year: "2020",
     title: "Foundations",
-    detail: "Fell in love with ML — from linear models to my first neural nets.",
+    detail:
+      "Began a B.Tech in Electrical & Electronics Engineering in Kolkata — and found my way to data.",
   },
   {
     year: "2021",
-    title: "Data Science, in the real world",
-    detail: "Turned messy operational data into forecasts that changed decisions.",
+    title: "First real operational data",
+    detail:
+      "Technical Apprentice at BPCL — analysing operations data across four departments, with zero compromise on compliance.",
   },
   {
-    year: "2022",
-    title: "The LLM inflection point",
-    detail: "Went all-in on generative AI, RAG, and agentic systems in production.",
+    year: "2023",
+    title: "Graduated, then went deep on research",
+    detail:
+      "Finished the B.Tech with a CGPA of 8.4 and joined Ayvole, analysing 4,000+ startups across 8 sectors.",
   },
   {
     year: "2024",
-    title: "Scaling AI at Amazon",
-    detail: "Serving models at scale — latency, reliability, and eval discipline.",
+    title: "Generative AI at AWS Bedrock",
+    detail:
+      "Joined AWS to build agentic systems, multimodal pipelines, and evaluation frameworks at production scale.",
   },
   {
     year: "2026",
     title: "Building the future of agents",
-    detail: "Open to new roles — designing autonomous systems that reason, act, and self-correct.",
+    detail:
+      "Open to Bangalore and global roles — designing autonomous systems that reason, act, and self-correct.",
   },
 ];
 

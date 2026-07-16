@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
 import type { Project } from "@/lib/site";
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -75,6 +75,17 @@ export function ProjectCard({ project }: { project: Project }) {
                 className="grid h-8 w-8 place-items-center rounded-full border text-muted transition-colors hover:text-[var(--fg)]"
               >
                 <Github className="h-4 w-4" />
+              </a>
+            )}
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${project.title} live demo`}
+                className="grid h-8 w-8 place-items-center rounded-full border text-muted transition-colors hover:text-[var(--fg)]"
+              >
+                <ExternalLink className="h-4 w-4" />
               </a>
             )}
           </div>

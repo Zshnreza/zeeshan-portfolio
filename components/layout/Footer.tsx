@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Calendar, Github, Linkedin, Mail } from "lucide-react";
 import { site } from "@/lib/site";
 
 export function Footer() {
@@ -6,7 +6,7 @@ export function Footer() {
   const socials = [
     { icon: Github, href: site.socials.github, label: "GitHub" },
     { icon: Linkedin, href: site.socials.linkedin, label: "LinkedIn" },
-    { icon: Twitter, href: site.socials.x, label: "X" },
+    { icon: Calendar, href: site.socials.calendly, label: "Book a call" },
     { icon: Mail, href: `mailto:${site.email}`, label: "Email" },
   ];
 
